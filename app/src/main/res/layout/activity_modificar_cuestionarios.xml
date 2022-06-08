@@ -237,7 +237,6 @@
                 android:layout_marginTop="50px"
                 android:layout_marginBottom="50px"
                 android:backgroundTint="#FEB703"
-                android:onClick="GuardarQuizz"
                 android:text="@string/boton_guardar"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"

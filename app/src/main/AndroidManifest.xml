@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quizizz_Maker">
         <activity
+            android:name="App.download.quizizz_maker.Docentes"
+            android:exported="false" />
+        <activity
+            android:name="App.download.quizizz_maker.Modificar_Cuestionarios"
+            android:exported="false" />
+        <activity
+            android:name="App.download.quizizz_maker.Cuestionario_disponible_Docente"
+            android:exported="false" />
+        <activity
+            android:name="App.download.quizizz_maker.selecciondequizz"
+            android:exported="false" />
+        <activity
             android:name="App.download.quizizz_maker.Cuestionario_disponible"
             android:exported="false" />
         <activity

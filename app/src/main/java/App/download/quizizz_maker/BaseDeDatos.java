@@ -21,13 +21,13 @@ public class BaseDeDatos extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
-    public void guardarCuestionario(String Nombre,String Categoria, String Pregunt, String RespCor, String RespInc1, String RespInc2, String RespInc3, String Pregunt2, String RespCor2, String RespInc2_1, String RespInc2_2, String RespInc2_3  ){
+    public void guardarCuestionario(String Nombre,String Categoria, String Pregunt, String RespCor, String RespInc1, String RespInc2, String RespInc3, String Pregunt2, String RespCor2, String RespInc2_1, String RespInc2_2, String RespInc2_3,String accion,String Id  ){
         SQLiteDatabase db = getWritableDatabase();
-        //if(accion.equals("modificar")){
-            //db.execSQL("update cuestionarios set  Nombre='"+Nombre+"',Categoria='"+Categoria+"',pregunta='"+ Pregunt +"', respuestaCorrecta='"+ RespCor +"',respuestaInc1='"+RespInc1+"', respuestaInc2='"+RespInc2+"',respuestaInc3='"+RespInc3+"',pregunta2='"+ Pregunt2 +"', respuestaCorrecta2='"+ RespCor2 +"',respuestaInc2_1='"+RespInc2_1+"', respuestaInc2_2='"+RespInc2_2+"',respuestaInc2_3='"+RespInc2_3+"', where idCuestionario='"+ Id +"'");
-        //} //else{
+        if(accion.equals("modificar")){
+            db.execSQL("update cuestionarios set  Nombre='"+Nombre+"',Categoria='"+Categoria+"',pregunta1='"+ Pregunt +"', respuestaCorrecta1_1='"+ RespCor +"',respuesta1_1='"+RespInc1+"', respuesta1_2='"+RespInc2+"',respuesta1_3='"+RespInc3+"',pregunta2='"+ Pregunt2 +"', respuestaCorrecta2_1='"+ RespCor2 +"',respuesta2_1='"+RespInc2_1+"', respuesta2_2='"+RespInc2_2+"',respuesta2_3='"+RespInc2_3+"' where idCuestionario='"+ Id +"'");
+        } {
             db.execSQL("insert into cuestionarios (nombre, categoria, pregunta1, respuestaCorrecta1_1, respuesta1_1, respuesta1_2, respuesta1_3, pregunta2, respuestaCorrecta2_1, respuesta2_1, respuesta2_2, respuesta2_3) values('"+Nombre+"','"+Categoria+"','"+Pregunt+"','"+RespCor+"', '"+RespInc1+"','"+RespInc2+"','"+RespInc3+"','"+Pregunt2+"','"+RespCor2+"','"+RespInc2_1+"','"+RespInc2_2+"','"+RespInc2_3+"')");
-        //}
+        }
     }
     public void eliminarCuestionario(String id){
         SQLiteDatabase db = getWritableDatabase();
@@ -38,6 +38,17 @@ public class BaseDeDatos extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery(sql, null);
         return c;
+    }
+
+    public Cursor consultarCuestionario(String id){
+        String sql = "select * from cuestionarios where idCuestionario='"+id+"' order by nombre asc ";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery(sql, null);
+        return c;
+    }
+    public void modificarQuizz(String id,String Nombre,String Categoria, String Pregunt, String RespCor, String RespInc1, String RespInc2, String RespInc3, String Pregunt2, String RespCor2, String RespInc2_1, String RespInc2_2, String RespInc2_3  ){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("update cuestionarios set  Nombre='"+Nombre+"',Categoria='"+Categoria+"',pregunta='"+ Pregunt +"', respuestaCorrecta='"+ RespCor +"',respuestaInc1='"+RespInc1+"', respuestaInc2='"+RespInc2+"',respuestaInc3='"+RespInc3+"',pregunta2='"+ Pregunt2 +"', respuestaCorrecta2='"+ RespCor2 +"',respuestaInc2_1='"+RespInc2_1+"', respuestaInc2_2='"+RespInc2_2+"',respuestaInc2_3='"+RespInc2_3+"', where idCuestionario='"+ id +"'");
     }
 }
 

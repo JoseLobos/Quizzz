@@ -7,90 +7,129 @@
     android:background="#43B4D4"
     tools:context="App.download.quizizz_maker.Creacion_cuestionario">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="349dp"
-        android:layout_height="63dp"
-        android:text="TextView"
+    <ScrollView
+        android:id="@+id/Pregunta1"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="231dp"
-        android:layout_height="63dp"
-        android:backgroundTint="#E72E68"
-        android:text="@string/opcion_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="231dp"
-        android:layout_height="63dp"
-        android:backgroundTint="#E72E68"
-        android:text="@string/opcion_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+            <TextView
+                android:id="@+id/NombreQuizz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="50dp"
+                android:text="TextView"
+                android:textSize="34sp" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="231dp"
-        android:layout_height="63dp"
-        android:backgroundTint="#E72E68"
-        android:text="@string/opcion_3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="TextView"
+                android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="231dp"
-        android:layout_height="63dp"
-        android:backgroundTint="#E72E68"
-        android:text="@string/opcion_4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.637" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="128dp"
-        android:layout_height="61dp"
-        android:backgroundTint="#FEB703"
-        android:text="@string/boton_salir"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
+                <RadioButton
+                    android:id="@+id/Opcion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40px"
+                    android:background="#E82929"
+                    android:text="RadioButton" />
 
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="130dp"
-        android:layout_height="61dp"
-        android:backgroundTint="#FEB703"
-        android:text="@string/boton_siguiente"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.889"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
+                <RadioButton
+                    android:id="@+id/opcion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40px"
+                    android:background="#E82929"
+                    android:text="RadioButton" />
 
+                <RadioButton
+                    android:id="@+id/opcion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40px"
+                    android:background="#E82929"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/opcion4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40px"
+                    android:background="#E82929"
+                    android:text="RadioButton" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Pregunta2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="TextView"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/opcion1Dos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40px"
+                    android:background="#E82929"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/opcion2Dos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40px"
+                    android:background="#E82929"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/opcion3dos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40px"
+                    android:background="#E82929"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/opcion4dos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40px"
+                    android:background="#E82929"
+                    android:text="RadioButton" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/Finalizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="200px"
+                android:background="#FFC107"
+                android:text="Finalizar"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
