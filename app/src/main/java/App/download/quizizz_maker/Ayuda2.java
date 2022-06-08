@@ -1,4 +1,4 @@
-package com.example.quizizz_maker;
+package App.download.quizizz_maker;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+
 
 public class Ayuda2 extends AppCompatActivity {
     Button Regresar;

@@ -1,4 +1,4 @@
-package com.example.quizizz_maker;
+package App.download.quizizz_maker;
 
 import androidx.appcompat.app.AppCompatActivity;
 

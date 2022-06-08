@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#43B4D4"
-    tools:context=".Cuestionario_disponible">
+    tools:context="App.download.quizizz_maker.Cuestionario_disponible">
 
     <TextView
         android:id="@+id/textView3"

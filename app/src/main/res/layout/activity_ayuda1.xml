@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#43B4D4 "
-    tools:context=".Ayuda1">
+    tools:context="App.download.quizizz_maker.Ayuda1">
 
     <Button
         android:id="@+id/btnenviar2"

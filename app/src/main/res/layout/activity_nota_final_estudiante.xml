@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#43B4D4"
-    tools:context=".Nota_final_estudiante">
+    tools:context="App.download.quizizz_maker.Nota_final_estudiante">
 
     <TextView
         android:id="@+id/textView2"

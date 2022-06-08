@@ -1,4 +1,4 @@
-package com.example.quizizz_maker;
+package App.download.quizizz_maker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 
 public class Segunda_Pantalla extends AppCompatActivity {
 Button docentes;

@@ -1,4 +1,4 @@
-package com.example.quizizz_maker;
+package App.download.quizizz_maker;
 
 import android.content.Context;
 import android.database.Cursor;
