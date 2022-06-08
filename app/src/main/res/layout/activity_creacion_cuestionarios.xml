@@ -145,7 +145,7 @@
                 app:layout_constraintVertical_bias="0.56" />
 
             <EditText
-                android:id="@+id/pregunta2_"
+                android:id="@+id/pregunta2"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="100px"
@@ -179,8 +179,8 @@
                 app:layout_constraintVertical_bias="0.286" />
 
             <EditText
-                android:id="@+id/respIncorrecta_2_"
-                android:layout_width="354dp"
+                android:id="@+id/respIncorrecta_2_1"
+                android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="100px"
                 android:layout_marginTop="50px"
@@ -193,7 +193,7 @@
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.414" />
+                app:layout_constraintVertical_bias="0.56" />
 
             <EditText
                 android:id="@+id/respIncorrecta_2_2"
