@@ -30,7 +30,7 @@ Button estudiantes;
     estudiantes.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-        Intent Cuestionariosestudiantes = new Intent(Segunda_Pantalla.this,Creacion_cuestionario.class);
+        Intent Cuestionariosestudiantes = new Intent(Segunda_Pantalla.this,Cuestionario_disponible.class);
         startActivity(Cuestionariosestudiantes);
         }
     });
