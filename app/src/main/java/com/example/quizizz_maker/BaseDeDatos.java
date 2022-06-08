@@ -26,7 +26,7 @@ public class BaseDeDatos extends SQLiteOpenHelper {
         //if(accion.equals("modificar")){
             //db.execSQL("update cuestionarios set  Nombre='"+Nombre+"',Categoria='"+Categoria+"',pregunta='"+ Pregunt +"', respuestaCorrecta='"+ RespCor +"',respuestaInc1='"+RespInc1+"', respuestaInc2='"+RespInc2+"',respuestaInc3='"+RespInc3+"',pregunta2='"+ Pregunt2 +"', respuestaCorrecta2='"+ RespCor2 +"',respuestaInc2_1='"+RespInc2_1+"', respuestaInc2_2='"+RespInc2_2+"',respuestaInc2_3='"+RespInc2_3+"', where idCuestionario='"+ Id +"'");
         //} //else{
-            db.execSQL("insert into cuestionarios (nombre, categoria, pregunta1, respuestaCorrecta1_1, respuesta1_1, respuesta1_2, respuesta1_3, pregunta2, respuestaCorrecta2_1, respuesta2_1, respuesta2_2, respuesta2_3,a) values('"+Nombre+"','"+Categoria+"','"+Pregunt+"','"+RespCor+"', '"+RespInc1+"','"+RespInc2+"','"+RespInc3+"','"+Pregunt2+"','"+RespCor2+"','"+RespInc2_1+"','"+RespInc2_2+"','"+RespInc2_3+"')");
+            db.execSQL("insert into cuestionarios (nombre, categoria, pregunta1, respuestaCorrecta1_1, respuesta1_1, respuesta1_2, respuesta1_3, pregunta2, respuestaCorrecta2_1, respuesta2_1, respuesta2_2, respuesta2_3) values('"+Nombre+"','"+Categoria+"','"+Pregunt+"','"+RespCor+"', '"+RespInc1+"','"+RespInc2+"','"+RespInc3+"','"+Pregunt2+"','"+RespCor2+"','"+RespInc2_1+"','"+RespInc2_2+"','"+RespInc2_3+"')");
         //}
     }
     public void eliminarCuestionario(String id){
