@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -37,4 +40,20 @@ Button estudiantes;
 
 
     }
-}
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menuayuda, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+
+
+        Intent imostrar= new Intent(Segunda_Pantalla.this, Ayuda1.class);
+        startActivity(imostrar);
+        return super.onOptionsItemSelected(item);
+
+        }
+
+    }
+

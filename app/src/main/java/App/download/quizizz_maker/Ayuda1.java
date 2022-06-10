@@ -14,7 +14,7 @@ public class Ayuda1 extends AppCompatActivity {
     Button Video;
     Button Crearquizz;
     Button resquizz;
-    Button iniciar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class Ayuda1 extends AppCompatActivity {
         Button Video = (Button)this.findViewById(R.id.btnVideo);
         Button Crearquizz = (Button)this.findViewById(R.id.btnCrearquizz);
         Button resquizz = (Button)this.findViewById(R.id.btnresquizz);
-        Button iniciar = (Button)this.findViewById(R.id.btniniciar);
+
 
 
         Video.setOnClickListener(new View.OnClickListener(){
@@ -34,13 +34,7 @@ public class Ayuda1 extends AppCompatActivity {
                 startActivity(ayuda2);
             }
         });
-        iniciar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent Segunda_Pantalla = new Intent(Ayuda1.this, Segunda_Pantalla.class);
-                startActivity(Segunda_Pantalla);
-            }
-        });
+
 
         Crearquizz.setOnClickListener(new View.OnClickListener() {
             @Override

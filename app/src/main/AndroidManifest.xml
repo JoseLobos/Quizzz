@@ -13,6 +13,18 @@
             android:name="App.download.quizizz_maker.Docentes"
             android:exported="false" />
         <activity
+            android:name="App.download.quizizz_maker.Ayuda1"
+            android:exported="false" />
+        <activity
+            android:name="App.download.quizizz_maker.Ayuda2"
+            android:exported="false" />
+        <activity
+            android:name="App.download.quizizz_maker.Ayuda3"
+            android:exported="false" />
+        <activity
+            android:name="App.download.quizizz_maker.Ayuda4"
+            android:exported="false" />
+        <activity
             android:name="App.download.quizizz_maker.Modificar_Cuestionarios"
             android:exported="false" />
         <activity
