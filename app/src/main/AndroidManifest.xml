@@ -37,12 +37,6 @@
             android:name="App.download.quizizz_maker.Cuestionario_disponible"
             android:exported="false" />
         <activity
-            android:name="App.download.quizizz_maker.Nota_final_estudiante"
-            android:exported="false" />
-        <activity
-            android:name="App.download.quizizz_maker.Nota_Final"
-            android:exported="false" />
-        <activity
             android:name="App.download.quizizz_maker.Creacion_Cuestionarios"
             android:exported="false" />
         <activity

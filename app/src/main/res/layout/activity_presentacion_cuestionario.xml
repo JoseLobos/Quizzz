@@ -127,7 +127,19 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="200px"
                 android:background="#FFC107"
-                android:text="Finalizar"
+                android:onClick="Finalizarb"
+                android:text="ENTREGAR"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/Salir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="200px"
+                android:background="#FFC107"
+                android:onClick="Salir"
+                android:text="SALIR"
                 android:textColor="#000000"
                 android:textSize="20sp" />
         </LinearLayout>

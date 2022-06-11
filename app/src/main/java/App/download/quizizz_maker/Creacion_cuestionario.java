@@ -2,11 +2,14 @@ package App.download.quizizz_maker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,12 +19,36 @@ import java.util.ArrayList;
 public class Creacion_cuestionario extends AppCompatActivity {
     BaseDeDatos db;
     public Cursor c;
+    RadioButton Opcion1,opcion2,opcion3,opcion4,opcion1Dos,opcion2Dos,opcion3dos,opcion4dos;
+    TextView NombreQuizz,textView10,Pregunta2;
+    Button  Entregar,Finalizar;
+    int nota=0; int Npregunta =1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presentacion_cuestionario);
 
+        Opcion1= (RadioButton)findViewById(R.id.Opcion1);
+        opcion2= (RadioButton)findViewById(R.id.opcion2);
+        opcion3= (RadioButton)findViewById(R.id.opcion3);
+        opcion4= (RadioButton)findViewById(R.id.opcion4);
+        opcion1Dos= (RadioButton)findViewById(R.id.opcion1Dos);
+        opcion2Dos= (RadioButton)findViewById(R.id.opcion2Dos);
+        opcion3dos= (RadioButton)findViewById(R.id.opcion3dos);
+        opcion4dos= (RadioButton)findViewById(R.id.opcion4dos);
+
+        NombreQuizz= (TextView)findViewById(R.id.NombreQuizz);
+        textView10= (TextView)findViewById(R.id.textView10);
+        Pregunta2= (TextView)findViewById(R.id.Pregunta2);
+
+        Entregar= (Button) findViewById(R.id.Finalizar);
+        Finalizar= (Button) findViewById(R.id.Salir);
+
+
         obtenerDatos();
+
+
     }
 
     public void obtenerDatos(){
@@ -75,4 +102,43 @@ public class Creacion_cuestionario extends AppCompatActivity {
 
 
     }}
+
+    public void Finalizarb (View view){
+        if (Opcion1.isChecked()== false && Opcion1.isChecked()== false && opcion2.isChecked()== false && opcion3.isChecked()== false && opcion4.isChecked()== false && opcion1Dos.isChecked()== false && opcion2Dos.isChecked()== false && opcion3dos.isChecked()== false ){
+            Toast.makeText(this, "ELIJA UNA OPCION ",Toast.LENGTH_SHORT).show();
+        }else if (Npregunta==1){
+            if (Opcion1.isChecked()){
+                nota=nota +5;
+            }
+            Npregunta=Npregunta+1;
+        }
+        else if (Npregunta==2){
+            if (opcion1Dos.isChecked()){
+                nota=nota +5;
+            }
+            NombreQuizz.setText("NOTA OBTENIDA: "+nota);
+            if (nota>=6){
+                textView10.setText("ESTADO APROBADO");
+            }
+            else {
+                textView10.setText("ESTADO REPROBADO");
+            }
+            Opcion1.setVisibility(View.GONE);
+            opcion2.setVisibility(View.GONE);
+            opcion3.setVisibility(View.GONE);
+            opcion4.setVisibility(View.GONE);
+            opcion1Dos.setVisibility(View.GONE);
+            opcion2Dos.setVisibility(View.GONE);
+            opcion3dos.setVisibility(View.GONE);
+            opcion4dos.setVisibility(View.GONE);
+            Pregunta2.setVisibility(View.GONE);
+            Entregar.setVisibility(View.GONE);
+
+        }
+    }
+
+public void Salir(View view){
+    Intent imostrar= new Intent(Creacion_cuestionario.this, Especialidad_Academica.class);
+    startActivity(imostrar);
+}
 }
