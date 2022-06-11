@@ -58,7 +58,7 @@ public class Creacion_Cuestionarios extends AppCompatActivity {
             cuestionarios = new BaseDeDatos(Creacion_Cuestionarios.this, "",null,1);
             cuestionarios.guardarCuestionario( Nombre, categoria,  Pregunta,Correcto,Incorrecto1,Incorrecto2,Incorrecto3,Pregunta2,Correcto2,Incorrecto2_1,Incorrecto2_2,Incorrecto2_3,accion,Id);
             Toast.makeText(Creacion_Cuestionarios.this, "Listo, Cuestionario registrado con exito", Toast.LENGTH_LONG).show();
-            Intent imostrar= new Intent(Creacion_Cuestionarios.this, Cuestionario_disponible_Docente.class);
+            Intent imostrar= new Intent(Creacion_Cuestionarios.this, Docentes.class);
             startActivity(imostrar);
         }
         catch(Exception ex){

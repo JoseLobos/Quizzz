@@ -60,8 +60,9 @@ public class Creacion_cuestionario extends AppCompatActivity {
         if(c.moveToFirst()){
 
             TextView NombreQuizz = (TextView) findViewById(R.id.NombreQuizz);
+
             TextView Pregunta1 = (TextView) findViewById(R.id.textView10);
-            TextView Pregunta2 = (TextView) findViewById(R.id.Pregunta2);
+
 
 
             Button opcion1 = (Button) findViewById(R.id.Opcion1);
@@ -75,7 +76,8 @@ public class Creacion_cuestionario extends AppCompatActivity {
 
 
             String Nombre = c.getString(1);
-            String Preg1 = c.getString(2);
+
+            String Preg1 = c.getString(3);
             String opc1 = c.getString(4);
             String opc2 = c.getString(5);
             String opc3 = c.getString(6);
@@ -87,6 +89,7 @@ public class Creacion_cuestionario extends AppCompatActivity {
             String opc4dos = c.getString(12);
 
              NombreQuizz.setText(Nombre);
+
              Pregunta1.setText(Preg1);
              Pregunta2.setText(Preg2);
 
@@ -104,7 +107,7 @@ public class Creacion_cuestionario extends AppCompatActivity {
     }}
 
     public void Finalizarb (View view){
-        if (Opcion1.isChecked()== false && Opcion1.isChecked()== false && opcion2.isChecked()== false && opcion3.isChecked()== false && opcion4.isChecked()== false && opcion1Dos.isChecked()== false && opcion2Dos.isChecked()== false && opcion3dos.isChecked()== false ){
+        if (Opcion1.isChecked()== false&& opcion2.isChecked()== false && opcion3.isChecked()== false && opcion4.isChecked()== false && opcion1Dos.isChecked()== false && opcion2Dos.isChecked()== false && opcion3dos.isChecked()== false && opcion4dos.isChecked()== false ){
             Toast.makeText(this, "ELIJA UNA OPCION ",Toast.LENGTH_SHORT).show();
         }else if (Npregunta==1){
             if (Opcion1.isChecked()){
