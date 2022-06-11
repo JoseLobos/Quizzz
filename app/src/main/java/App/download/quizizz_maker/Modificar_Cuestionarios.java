@@ -59,8 +59,8 @@ public class Modificar_Cuestionarios extends AppCompatActivity {
 
                     cuestionarios = new BaseDeDatos(Modificar_Cuestionarios.this, "",null,1);
                     cuestionarios.modificarQuizz(Nombre, categoria,  Pregunta,Correcto,Incorrecto1,Incorrecto2,Incorrecto3,Pregunta2,Correcto2,Incorrecto2_1,Incorrecto2_2,Incorrecto2_3,Id);
-                    Toast.makeText(Modificar_Cuestionarios.this, "Listo, Cuestionario registrado con exito", Toast.LENGTH_LONG).show();
-                    Intent imostrar= new Intent(Modificar_Cuestionarios.this, Especialidad_Academica.class);
+                    Toast.makeText(Modificar_Cuestionarios.this, "Listo, Cuestionario modificado con exito", Toast.LENGTH_LONG).show();
+                    Intent imostrar = new Intent(Modificar_Cuestionarios.this, Especialidad_Academica.class);
                     startActivity(imostrar);
                 }
                 catch(Exception ex){
