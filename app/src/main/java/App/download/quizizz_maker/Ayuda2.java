@@ -14,32 +14,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class Ayuda2 extends AppCompatActivity {
-    VideoView vv1;
-    TextView tv1,tv2;
-
+    VideoView videoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ayuda2);
-        vv1=findViewById(R.id.vv1);
-        tv1=findViewById(R.id.tv1);
-        tv2=findViewById(R.id.tv2);
+
+        videoView = (VideoView)findViewById(R.id.videoView);
+
+       // String path = "android.resource://"+ getPackageName() + "/" +
+              //  R.raw.;
+       // videoView.setVideoURI(Uri.parse(path));
+      //  videoView.start();
 
     }
-    public void inicar (View view)
-    {
-        tv1.setText("ESTADO: DESCARGANDO DE INTERNET");
-        vv1.setVideoURI(Uri.parse("https://youtu.be/ltNCaZcPRgA"));
-        vv1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                tv1.setText("ESTADO: REPRODUCIENDO");
-                tv2.setText("DURACION:"+(vv1.getDuration()/1000)+"seg.");
-                vv1.start();
-            }
-        });
-    }
-
-
 }
 

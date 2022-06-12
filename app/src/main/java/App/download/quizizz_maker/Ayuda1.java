@@ -27,13 +27,13 @@ public class Ayuda1 extends AppCompatActivity {
 
 
 
-        Video.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent ayuda2 = new Intent(Ayuda1.this, Ayuda2.class);
-                startActivity(ayuda2);
-            }
-        });
+     //   Video.setOnClickListener(new View.OnClickListener(){
+          //  @Override
+          //  public void onClick(View view) {
+               // Intent ayuda2 = new Intent(Ayuda1.this, Ayuda2.class);
+              //  startActivity(ayuda2);
+         //   }
+     //   });
 
 
         Crearquizz.setOnClickListener(new View.OnClickListener() {
